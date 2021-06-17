@@ -4,8 +4,6 @@
 // that code so it'll be compiled.
 
 import Rails from "@rails/ujs"
-import Turbolinks from "turbolinks"
-import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
 import 'uswds/src/stylesheets/uswds.scss'
@@ -20,5 +18,3 @@ window.onload = () => {
 }
 
 Rails.start()
-Turbolinks.start()
-ActiveStorage.start()
