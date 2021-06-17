@@ -1,2 +1,29 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<section class="usa-hero" aria-label="Introduction">
+  <div class="grid-container">
+    <div class="usa-hero__callout">
+      <h1 class="usa-hero__heading">
+        <span class="usa-hero__heading--alt">Center visits:</span>
+        You're going to need to eat
+      </h1>
+      <p>
+        Find the closest Taco place to your planned trip
+      </p>
+      <%= link_to "Get started", root_path, class: "usa-button" %>
+    </div>
+  </div>
+</section>
+
+<section class="grid-container usa-section">
+  <div class="grid-row grid-gap">
+    <div class="tablet:grid-col-4">
+      <h2 class="font-heading-xl margin-top-0 tablet:margin-bottom-0">
+        Pulling data together
+      </h2>
+    </div>
+    <div class="tablet:grid-col-8 usa-prose">
+      We can combine data from
+      <%= link_to "ECLKC", "https://eclkc.ohs.acf.hhs.gov" %> and <%= link_to "Yelp", "https://www.yelp.com/" %>
+      to find the perfect lunch spot for your next on-site TTA or Monitoring visit.
+    </div>
+  </div>
+</section>
