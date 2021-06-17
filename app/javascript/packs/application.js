@@ -8,6 +8,17 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
+import 'uswds/src/stylesheets/uswds.scss'
+import 'uswds/dist/img/close.svg'
+import 'uswds/dist/img/icon-dot-gov.svg'
+import 'uswds/dist/img/us_flag_small.png'
+import 'uswds/dist/img/icon-https.svg'
+import 'uswds/dist/img/circle-124.png'
+
+window.onload = () => {
+  require('uswds')
+}
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
