@@ -1,0 +1,17 @@
+<section class="grid-container usa-section">
+  <div class="grid-row grid-gap">
+    <div class="tablet:grid-col-4">
+      <h1>Center Finder</h1>
+      <p><%= @count %> centers found in Maryland</p>
+    </div>
+    <div class="tablet:grid-col-8">
+      <%= form_tag lunch_path, class: "usa-form" do %>
+        <%= label_tag :center_id, "Center", class: "usa-label" %>
+        <div class="usa-combo-box">
+          <%= select_tag :center_id, options_for_select(@centers_options), class: "usa-select" %>
+        </div>
+        <%= submit_tag "Find Tacos", class: "usa-button" %>
+      <% end %>
+    </div>
+  </div>
+</section>
