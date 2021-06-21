@@ -1,0 +1,14 @@
+---
+applications:
+  - name: center-tacos
+    memory: 512M
+    disk_quota: 1G
+    instances: 1
+    buildpacks:
+      - ruby_buildpack
+    env:
+      RAILS_ENV: production
+      NODE_ENV: production
+      RAILS_LOG_TO_STDOUT: true
+      RAILS_SERVE_STATIC_FILES: true
+      BUNDLE_WITHOUT: "test:development"
