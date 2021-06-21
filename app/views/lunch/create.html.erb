@@ -7,7 +7,7 @@
   <div class="grid-row grid-gap">
     <div class="tablet:grid-col-5">
       <h2>Tacos!</h2>
-      <p>The nearest taco place is: <%= link_to @tacos[:name], @tacos[:url], target: "_blank" %></p>
+      <p>The best taco place is: <%= link_to @tacos[:name], @tacos[:url], target: "_blank" %></p>
       <%= image_tag @tacos[:image_url] %>
       <p><%= yelp_address(@tacos[:location]).join("<br>").html_safe %></p>
       <p><%= @tacos[:display_phone] %></p>
