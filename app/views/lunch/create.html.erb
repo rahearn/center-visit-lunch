@@ -5,17 +5,23 @@
     </div>
   </div>
   <div class="grid-row grid-gap">
-    <div class="tablet:grid-col-4">
+    <div class="tablet:grid-col-5">
       <h2>Tacos!</h2>
-      <p>The nearest taco place is</p>
+      <p>The nearest taco place is: <%= link_to @tacos[:name], @tacos[:url], target: "_blank" %></p>
+      <%= image_tag @tacos[:image_url] %>
+      <p><%= yelp_address(@tacos[:location]).join("<br>").html_safe %></p>
+      <p><%= @tacos[:display_phone] %></p>
     </div>
-    <div class="tablet:grid-col-8">
-      <h2>Center details from ECLKC</h2>
+    <div class="tablet:grid-col-7">
+      <h2>API Call details</h2>
+      <h3>Center details from ECLKC</h3>
       <% if @error %>
         <pre><%= JSON.pretty_generate @api.response_json %></pre>
       <% else %>
         <pre><%= JSON.pretty_generate @center %></pre>
       <% end %>
+      <h3>Taco details from Yelp</h3>
+      <pre><%= JSON.pretty_generate @tacos %></pre>
     </div>
   </div>
 </section>

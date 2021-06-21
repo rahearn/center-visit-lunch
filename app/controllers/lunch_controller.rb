@@ -9,6 +9,7 @@ class LunchController < ApplicationController
   def create
     @center = api.centers(cid: params[:center_id])["documents"].first
     @error = api.error_response?
+    @tacos = YelpApi.new.call(lat: @center["latitude"], lon: @center["longitude"])
   end
 
   private
