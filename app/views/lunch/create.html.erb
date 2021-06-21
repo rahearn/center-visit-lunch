@@ -20,8 +20,10 @@
       <% else %>
         <pre><%= JSON.pretty_generate @center %></pre>
       <% end %>
+      <p><%= link_to "ECLKC API Documentation", "https://eclkc.ohs.acf.hhs.gov/developers/guide", target: "_blank" %></p>
       <h3>Taco details from Yelp</h3>
       <pre><%= JSON.pretty_generate @tacos %></pre>
+      <p><%= link_to "Yelp API Documentation", "https://www.yelp.com/developers/documentation/v3/business_search", target: "_blank" %></p>
     </div>
   </div>
 </section>
