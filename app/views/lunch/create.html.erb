@@ -1,1 +1,21 @@
-<pre><%= JSON.pretty_generate @center %></pre>
+<section class="grid-container usa-section">
+  <div class="grid-row grid-gap">
+    <div class="grid-col-12">
+      <h1>Lunch Time!</h1>
+    </div>
+  </div>
+  <div class="grid-row grid-gap">
+    <div class="tablet:grid-col-4">
+      <h2>Tacos!</h2>
+      <p>The nearest taco place is</p>
+    </div>
+    <div class="tablet:grid-col-8">
+      <h2>Center details from ECLKC</h2>
+      <% if @error %>
+        <pre><%= JSON.pretty_generate @api.response_json %></pre>
+      <% else %>
+        <pre><%= JSON.pretty_generate @center %></pre>
+      <% end %>
+    </div>
+  </div>
+</section>

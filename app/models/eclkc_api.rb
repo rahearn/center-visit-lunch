@@ -17,6 +17,8 @@ class EclkcApi
       req.params = req.params.merge query_params
     }
     @response_json = JSON.parse(response.body).with_indifferent_access
+    Rails.logger.debug { "Centers(#{query_params.inspect}) returned: #{@response_json.inspect}" }
+    @response_json
   end
 
   def programs(query_params)
@@ -24,6 +26,8 @@ class EclkcApi
       req.params = req.params.merge query_params
     }
     @response_json = JSON.parse(response.body).with_indifferent_access
+    Rails.logger.debug { "Programs(#{query_params.inspect}) returned: #{@response_json.inspect}" }
+    @response_json
   end
 
   def error_response?
