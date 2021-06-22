@@ -5,7 +5,7 @@
       <p><%= @count %> centers found in Maryland</p>
     </div>
     <div class="tablet:grid-col-8">
-      <%= form_tag lunch_path, class: "usa-form" do %>
+      <%= form_tag lunch_path, class: "usa-form usa-form--large" do %>
         <%= label_tag :center_id, "Center", class: "usa-label" %>
         <div class="usa-combo-box">
           <%= select_tag :center_id, options_for_select(@centers_options), class: "usa-select" %>

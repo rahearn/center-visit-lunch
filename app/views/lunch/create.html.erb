@@ -11,6 +11,7 @@
       <%= image_tag @tacos[:image_url] %>
       <p><%= yelp_address(@tacos[:location]).join("<br>").html_safe %></p>
       <p><%= @tacos[:display_phone] %></p>
+      <p><%= link_to "Start over", lunch_path, class: "usa-button" %></p>
     </div>
     <div class="tablet:grid-col-7">
       <h2>API Call details</h2>
